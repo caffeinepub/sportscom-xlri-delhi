@@ -1,4 +1,4 @@
-import { SiInstagram, SiLinkedin } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -126,37 +126,6 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <SiInstagram size={16} />
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-ocid="footer.linkedin.link"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 38,
-                  height: 38,
-                  border: "1px solid #2a2a1a",
-                  color: "#666",
-                  transition: "border-color 0.2s, color 0.2s",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                    "#c9a227";
-                  (e.currentTarget as HTMLAnchorElement).style.color =
-                    "#e8c84a";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                    "#2a2a1a";
-                  (e.currentTarget as HTMLAnchorElement).style.color = "#666";
-                }}
-                aria-label="LinkedIn"
-              >
-                <SiLinkedin size={16} />
               </a>
             </div>
           </div>

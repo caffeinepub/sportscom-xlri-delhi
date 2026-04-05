@@ -18,7 +18,7 @@ const EVENTS = [
     description:
       "Ratanjee is a three-day intra-college sporting event featuring an exciting face-off between senior and junior batches across 12+ sports. It serves as a platform for talent scouting, team building, and fostering camaraderie, while strengthening the institute's internal sporting culture.",
     image:
-      "/assets/ratanjee_2026_placeholder-019d5f2d-db7f-76f0-ad64-ba3a956fed37.jpg",
+      "/assets/ratanjee_2026_placeholder-019d5f42-fc84-761d-a5af-bafbc30892d6.jpg",
     driveLink:
       "https://drive.google.com/drive/folders/1X30zUNLR18JKh8xjx3V-8Zv1Ql4PhmNX?usp=drive_link",
     flagship: false,
@@ -30,7 +30,7 @@ const EVENTS = [
     description:
       "Northern Brawl is the flagship inter-collegiate sports tournament hosted by SportsCom. Spanning three days and featuring 10+ sports, it brings together top institutions like FMS Delhi, MDI Gurgaon, IIFT Delhi, and IIM Rohtak. With 400+ participants, it promotes high-level competition, sportsmanship, and inter-college collaboration.",
     image:
-      "/assets/northern_brawl_2026_placeholder-019d5f2d-cfe7-7038-93ce-a030b07f90ce.jpg",
+      "/assets/northern_brawl_2026_placeholder-019d5f42-e9e3-77f2-a2fb-5f3afc54ff86.jpg",
     driveLink:
       "https://drive.google.com/drive/folders/1rm5s58OIiaI--OV5mY7u8bRm0SOihrJb?usp=drive_link",
     flagship: true,
