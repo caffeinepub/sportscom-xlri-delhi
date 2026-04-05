@@ -3,8 +3,8 @@ import { AboutSection } from "./components/AboutSection";
 import { AdminGalleryPanel } from "./components/AdminGalleryPanel";
 import { ContactSection } from "./components/ContactSection";
 import { EventsSection } from "./components/EventsSection";
+import { EventsThisYearSection } from "./components/EventsThisYearSection";
 import { Footer } from "./components/Footer";
-import { GallerySection } from "./components/GallerySection";
 import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
 import { TeamSection } from "./components/TeamSection";
@@ -22,9 +22,9 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <EventsThisYearSection />
         <EventsSection />
         <TeamSection />
-        <GallerySection />
         <ContactSection />
       </main>
       <Footer />

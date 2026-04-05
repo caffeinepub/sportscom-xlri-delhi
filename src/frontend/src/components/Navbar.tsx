@@ -5,8 +5,8 @@ import { useInternetIdentity } from "../hooks/useInternetIdentity";
 const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Events", href: "#events" },
+  { label: "This Year", href: "#events-this-year" },
   { label: "Team", href: "#team" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -30,8 +30,8 @@ export function Navbar() {
       "hero",
       "about",
       "events",
+      "events-this-year",
       "team",
-      "gallery",
       "contact",
     ];
     const observers: IntersectionObserver[] = [];
@@ -108,20 +108,16 @@ export function Navbar() {
               overflow: "hidden",
               flexShrink: 0,
             }}
-            title="Logo placeholder"
           >
-            <span
+            <img
+              src="/assets/sportscom_logo-019d5f20-0759-7368-aba5-2c7ac95bff12.png"
+              alt="Sportscom XLRI Delhi Logo"
               style={{
-                color: "#555",
-                fontSize: "0.55rem",
-                fontWeight: 700,
-                letterSpacing: "0.05em",
-                textAlign: "center",
-                lineHeight: 1.2,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
-            >
-              LOGO
-            </span>
+            />
           </div>
           <span
             style={{
@@ -175,19 +171,11 @@ export function Navbar() {
           })}
         </div>
 
-        {/* Right: Join Us + Auth */}
+        {/* Right: Auth only */}
         <div
           style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
           className="hidden md:flex"
         >
-          <button
-            type="button"
-            className="btn-gold-outline"
-            style={{ borderRadius: "999px", padding: "0.4rem 1.2rem" }}
-            data-ocid="nav.join_us.button"
-          >
-            Join Us
-          </button>
           {isAuthenticated ? (
             <button
               type="button"
@@ -290,14 +278,6 @@ export function Navbar() {
                 borderTop: "1px solid #1a1a1a",
               }}
             >
-              <button
-                type="button"
-                className="btn-gold-outline"
-                style={{ borderRadius: "999px" }}
-                data-ocid="nav.mobile.join_us.button"
-              >
-                Join Us
-              </button>
               {isAuthenticated ? (
                 <button
                   type="button"

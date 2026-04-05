@@ -4,23 +4,29 @@ const EVENTS = [
   {
     name: "Ratanjee 2026",
     description:
-      "XLRI Delhi's flagship inter-college sports festival bringing together top athletes from across institutions for a weekend of intense competition and camaraderie.",
+      "Ratanjee 2026 will continue to build on its legacy as the premier intra-college sporting showdown between senior and junior batches. With participation across multiple sports, the event will focus on deeper engagement, stronger competition, and enhanced talent scouting to prepare teams for upcoming inter-college tournaments.",
     label: "Ratanjee",
-    tag: "Inter-College Festival",
+    tag: "Intra-College Showdown",
+    image:
+      "/assets/ratanjee_placeholder-019d5f39-e845-7692-9534-829ca754aecc.jpg",
   },
   {
     name: "Northern Brawl 2026",
     description:
-      "A high-energy inter-college sports tournament that pits the best northern region college teams against each other across multiple sports disciplines.",
+      "Northern Brawl 2026 will return bigger and more competitive, bringing together top business schools from across the country. With an expanded scale, improved formats, and higher participation, the event aims to further establish itself as one of the most anticipated inter-collegiate sports tournaments in the circuit.",
     label: "Northern Brawl",
-    tag: "Inter-College Tournament",
+    tag: "Flagship Inter-College Tournament",
+    image:
+      "/assets/northern_brawl_placeholder-019d5f39-dac3-71dc-bbf5-e9a1721ffd29.jpg",
   },
   {
     name: "XPL 2027",
     description:
-      "The XLRI Premier League, an intra-college sports league that runs over several weeks, featuring team-based competitions in cricket, football, and more.",
+      "XPL 2027 will continue to serve as the grand conclusion to the sporting calendar, combining competition with celebration. With its unique auction-based format and emphasis on inclusivity, the event will aim to deliver an even more engaging and high-energy experience for participants and spectators alike.",
     label: "XPL",
-    tag: "Intra-College League",
+    tag: "Grand Sporting Finale",
+    image:
+      "/assets/xpl_2027_place_holder-019d5f04-b027-714e-af13-f3af6b402210.jpeg",
   },
 ];
 
@@ -74,26 +80,55 @@ export function EventsSection() {
               style={{ overflow: "hidden" }}
               data-ocid={`events.item.${i + 1}`}
             >
-              {/* Image Placeholder */}
-              <div
-                className="placeholder-image"
-                style={{
-                  height: 200,
-                  borderBottom: "1px solid #2a2a1a",
-                }}
-              >
-                <span className="label">{event.label}</span>
-                <span
+              {/* Event Image or Placeholder */}
+              {event.image ? (
+                <div
                   style={{
-                    color: "#333",
-                    fontSize: "0.6rem",
-                    position: "relative",
-                    zIndex: 1,
+                    height: 200,
+                    borderBottom: "1px solid #2a2a1a",
+                    overflow: "hidden",
                   }}
                 >
-                  Event Photo Placeholder
-                </span>
-              </div>
+                  <img
+                    src={event.image}
+                    alt={event.name}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform 0.4s",
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLImageElement).style.transform =
+                        "scale(1.05)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLImageElement).style.transform =
+                        "scale(1)";
+                    }}
+                  />
+                </div>
+              ) : (
+                <div
+                  className="placeholder-image"
+                  style={{
+                    height: 200,
+                    borderBottom: "1px solid #2a2a1a",
+                  }}
+                >
+                  <span className="label">{event.label}</span>
+                  <span
+                    style={{
+                      color: "#333",
+                      fontSize: "0.6rem",
+                      position: "relative",
+                      zIndex: 1,
+                    }}
+                  >
+                    Event Photo
+                  </span>
+                </div>
+              )}
 
               {/* Content */}
               <div style={{ padding: "1.5rem" }}>

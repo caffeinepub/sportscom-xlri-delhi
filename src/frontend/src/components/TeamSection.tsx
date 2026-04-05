@@ -44,7 +44,7 @@ const TEAM_MEMBERS = [
     name: "Joseph",
     role: "Senior Executive Member",
     linkedin: null,
-    photo: null,
+    photo: "/assets/joseph-019d5f20-0b3b-7612-b34b-92db8f7bd1ae.jpeg",
   },
 ];
 

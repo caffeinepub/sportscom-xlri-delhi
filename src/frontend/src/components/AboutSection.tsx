@@ -10,10 +10,7 @@ const STAT_CHIPS = [
 
 export function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({
-    threshold: 0.15,
-  });
-  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({
+  const { ref: textRef, isVisible: textVisible } = useScrollAnimation({
     threshold: 0.15,
   });
 
@@ -30,112 +27,94 @@ export function AboutSection() {
       }}
     >
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: "4rem",
-          alignItems: "center",
-        }}
-        className="lg:grid-cols-2"
+        ref={textRef as React.RefObject<HTMLDivElement>}
+        className={`anim-fade-up ${textVisible ? "visible" : ""}`}
+        style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}
       >
-        {/* Left: Text */}
         <div
-          ref={leftRef as React.RefObject<HTMLDivElement>}
-          className={`anim-fade-left ${leftVisible ? "visible" : ""}`}
+          style={{
+            width: 48,
+            height: 3,
+            background: "#c9a227",
+            margin: "0 auto 1.5rem",
+          }}
+        />
+        <h2 className="section-heading" style={{ marginBottom: "1.5rem" }}>
+          About Us
+        </h2>
+        <p
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: "0.9rem",
+            lineHeight: 1.85,
+            color: "#9c9c9c",
+            marginBottom: "1.25rem",
+          }}
         >
-          <div
-            style={{
-              width: 48,
-              height: 3,
-              background: "#c9a227",
-              marginBottom: "1.5rem",
-            }}
-          />
-          <h2 className="section-heading" style={{ marginBottom: "1.5rem" }}>
-            About Us
-          </h2>
-          <p
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: "0.9rem",
-              lineHeight: 1.85,
-              color: "#9c9c9c",
-              marginBottom: "2rem",
-              maxWidth: 580,
-            }}
-          >
-            Sportscom XLRI Delhi is the sports committee of XLRI Delhi-NCR
-            Campus. It is responsible for organizing and managing all sports
-            activities on campus, fostering a spirit of teamwork, competition,
-            and athletic excellence among students. Sportscom hosts major
-            inter-college and intra-college sporting events throughout the
-            academic year, bringing together hundreds of athletes across more
-            than 12 disciplines including cricket, football, basketball,
-            badminton, table tennis, volleyball, and more. The committee is
-            driven by a passionate team of student leaders committed to building
-            a vibrant sports culture at XLRI Delhi.
-          </p>
+          SportsCom at XLRI Delhi-NCR is the driving force behind the
+          institute&apos;s vibrant sporting culture, dedicated to fostering
+          participation, leadership, and excellence in sports. Throughout the
+          academic year, SportsCom curates a diverse range of events&mdash;both
+          internal and inter-collegiate&mdash;that bring together students
+          across batches and institutions.
+        </p>
+        <p
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: "0.9rem",
+            lineHeight: 1.85,
+            color: "#9c9c9c",
+            marginBottom: "1.25rem",
+          }}
+        >
+          From nurturing talent within the campus to representing XLRI on
+          national platforms, SportsCom plays a pivotal role in building
+          teamwork, discipline, and competitive spirit. Our initiatives are
+          designed not just to promote athletic performance, but also to create
+          a strong sense of community, collaboration, and inclusivity.
+        </p>
+        <p
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: "0.9rem",
+            lineHeight: 1.85,
+            color: "#9c9c9c",
+            marginBottom: "2rem",
+          }}
+        >
+          With flagship events, competitive tournaments, and external
+          representations, SportsCom continues to strengthen the sporting
+          ecosystem while encouraging students to push boundaries and strive for
+          excellence both on and off the field.
+        </p>
 
-          {/* Stat Chips */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "0.6rem",
-            }}
-          >
-            {STAT_CHIPS.map((chip) => (
-              <span
-                key={chip}
-                style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#e8c84a",
-                  border: "1px solid #c9a227",
-                  padding: "0.35rem 0.85rem",
-                  background: "rgba(201,162,39,0.07)",
-                }}
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Right: Image Placeholder */}
+        {/* Stat Chips */}
         <div
-          ref={rightRef as React.RefObject<HTMLDivElement>}
-          className={`anim-fade-right ${rightVisible ? "visible" : ""}`}
-          style={{ display: "flex", justifyContent: "center" }}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.6rem",
+            justifyContent: "center",
+          }}
         >
-          <div
-            style={{
-              width: "100%",
-              maxWidth: 460,
-              aspectRatio: "1",
-              border: "2px solid #c9a227",
-              background: "#141414",
-              position: "relative",
-              boxShadow: "8px 8px 0px #1a1500",
-            }}
-            className="placeholder-image"
-            data-ocid="about.image.panel"
-          >
-            <span className="label">About Photo</span>
+          {STAT_CHIPS.map((chip) => (
             <span
+              key={chip}
               style={{
-                color: "#333",
-                fontSize: "0.65rem",
-                position: "relative",
-                zIndex: 1,
+                fontFamily: "'Montserrat', sans-serif",
+                fontSize: "0.72rem",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#e8c84a",
+                border: "1px solid #c9a227",
+                padding: "0.35rem 0.85rem",
+                background: "rgba(201,162,39,0.07)",
               }}
             >
-              Upload a sports event photo
+              {chip}
             </span>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -21,8 +21,8 @@ const CONTACTS = [
   {
     icon: <SiInstagram size={26} color="#c9a227" />,
     label: "Instagram",
-    content: "@sportscom_xlri_delhi",
-    href: "https://www.instagram.com/sportscom_xlri_delhi",
+    content: "@sportscomdelhi.xlri",
+    href: "https://www.instagram.com/sportscomdelhi.xlri",
     id: "instagram",
   },
 ];

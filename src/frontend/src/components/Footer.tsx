@@ -97,7 +97,7 @@ export function Footer() {
             </div>
             <div style={{ display: "flex", gap: "0.75rem" }}>
               <a
-                href="https://www.instagram.com/sportscom_xlri_delhi"
+                href="https://www.instagram.com/sportscomdelhi.xlri"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-ocid="footer.instagram.link"
@@ -183,7 +183,7 @@ export function Footer() {
               margin: 0,
             }}
           >
-            © {year} Sportscom XLRI Delhi. All rights reserved.
+            &copy; {year} Sportscom XLRI Delhi. All rights reserved.
           </p>
           <p
             style={{
