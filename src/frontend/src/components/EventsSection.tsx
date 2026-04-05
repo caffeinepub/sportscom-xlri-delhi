@@ -165,18 +165,11 @@ export function EventsSection() {
                     fontSize: "0.82rem",
                     lineHeight: 1.75,
                     color: "#777",
-                    marginBottom: "1.5rem",
+                    marginBottom: 0,
                   }}
                 >
                   {event.description}
                 </p>
-                <button
-                  type="button"
-                  className="btn-gold-outline"
-                  data-ocid={`events.item.${i + 1}.button`}
-                >
-                  Learn More
-                </button>
               </div>
             </div>
           ))}
